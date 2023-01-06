@@ -22,13 +22,14 @@ const App = () => {
   return (
     <div>
       <Title />
-      {productos.map((producto)=> {
+      {productos.map((value, index)=> {
         return(
           <Card
+          key={index}
           className="card"
-          title={producto.title} 
-          price={producto.price} 
-          stock={producto.stock}        
+          title={value.title} 
+          price={value.price} 
+          stock={value.stock}        
         />
         )
       })}
